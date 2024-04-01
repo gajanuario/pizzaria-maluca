@@ -27,7 +27,7 @@ recursiveReaddir(pathFiles, ['!*.js'], (err, files) => {
     files.forEach(element => { require(element)(server) })
 });
 
-// Utilizado para não dar problema com requisições no Chrome (CORS)
+// Utilizado para não dar problema com requisições no Chrome (CORS)!
 server.use(
     function nocache(req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
